@@ -1,0 +1,81 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'normalize';
+
+html, body {
+	font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#sidebar {
+	width: 250px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background: #f5f7f9;
+	padding: 7em 0 0 0;
+	border-right: 1px solid #d6dce0;
+	#logo {
+		width: 40px;
+		position: absolute;
+		right: 3em;
+		top: 3em;
+	}
+	ul {
+		list-style: none;
+		text-align: right;
+		padding-right: 3em;
+		.category {
+			font-weight: 700;
+			font-size: 0.7em;
+			text-transform: uppercase;
+			color: #4aa3df;
+		}
+		li {
+			padding: .5em 0;
+			a {
+				color: #9eafba;
+				text-decoration: none;
+				transition: all .4s ease;
+				&:hover {
+					color: #4aa3df;
+				}
+			}
+		}
+		.active {
+			a {
+				color: #4aa3df;
+			}
+		}
+	}
+	.sign_in {
+		position: absolute;
+		right: 3em;
+		top: 80%;
+		font-size: .8em;
+		color: #9eafba;
+	}
+}
